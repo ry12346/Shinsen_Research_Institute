@@ -1,0 +1,29 @@
+/* 真戦シミュレーター: データ保護UI */
+#sri-data-protection{position:fixed;bottom:12px;right:12px;z-index:1900;max-width:calc(100vw - 24px);font-family:system-ui,-apple-system,"Yu Gothic",Meiryo,sans-serif;color:#1e293b;font-size:12px;line-height:1.55}
+#sri-data-protection *{box-sizing:border-box}
+#sri-data-protection button,#sri-data-protection .sri-dp-file-label{font:inherit;cursor:pointer}
+#sri-data-protection .sri-dp-trigger{display:flex;align-items:center;gap:7px;max-width:calc(100vw - 24px);padding:7px 11px;border-radius:25px;border:1px solid #cbd5e1;background:#fff;color:#334155;box-shadow:0 2px 12px rgba(15,23,42,.15);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#sri-data-protection .sri-dp-trigger:hover{background:#f8fafc}
+#sri-data-protection .sri-dp-trigger span:last-child{overflow:hidden;text-overflow:ellipsis}
+#sri-data-protection .sri-dp-dot{background:#10b981;width:7px;height:7px;border-radius:50%;flex:none}
+#sri-data-protection.sri-dp-has-error .sri-dp-dot{background:#e11d48}
+#sri-data-protection .sri-dp-panel{width:min(355px,calc(100vw - 24px));max-height:min(650px,calc(100dvh - 68px));overflow:auto;position:absolute;bottom:43px;right:0;padding:15px;background:white;border:1px solid #cbd5e1;border-radius:12px;box-shadow:0 8px 30px rgba(15,23,42,.23)}
+#sri-data-protection [hidden]{display:none!important}
+#sri-data-protection .sri-dp-header{display:flex;justify-content:space-between;align-items:center;font-size:14px;margin-bottom:10px}
+#sri-data-protection .sri-dp-close{border:0;background:transparent;font-size:22px;line-height:1;padding:1px 6px;color:#475569}
+#sri-data-protection .sri-dp-status{display:flex;justify-content:space-between;gap:8px;padding:6px 0;border-bottom:1px solid #f1f5f9}
+#sri-data-protection .sri-dp-status>span{color:#64748b}
+#sri-data-protection .sri-dp-status>strong{text-align:right;font-weight:600}
+#sri-data-protection .sri-dp-note{color:#64748b;font-size:11px;line-height:1.6;margin:9px 0}
+#sri-data-protection .sri-dp-line{border-top:1px solid #e2e8f0;margin:13px 0}
+#sri-data-protection .sri-dp-section-title{font-size:12px}
+#sri-data-protection .sri-dp-primary,#sri-data-protection .sri-dp-secondary,#sri-data-protection .sri-dp-danger,#sri-data-protection .sri-dp-file-label{display:block;text-align:center;width:100%;padding:8px 10px;border-radius:8px;border:1px solid #94a3b8;background:#fff;color:#1e293b;margin-top:9px;font-weight:600}
+#sri-data-protection .sri-dp-primary{color:#fff;background:#334155;border-color:#334155}
+#sri-data-protection .sri-dp-primary:hover{background:#1e293b}
+#sri-data-protection .sri-dp-danger{background:#fff1f2;color:#9f1239;border-color:#fecdd3}
+#sri-data-protection .sri-dp-danger:disabled{opacity:.45;cursor:not-allowed}
+#sri-data-protection .sri-dp-preview{padding-top:9px}
+#sri-data-protection .sri-dp-preview p:first-child{word-break:break-word;margin:0 0 6px}
+#sri-data-protection .sri-dp-message{min-height:16px;font-size:11px;color:#0f766e;margin:10px 0 0;overflow-wrap:anywhere}
+#sri-data-protection .sri-dp-message.sri-dp-error{color:#be123c}
+@media(max-width:480px){#sri-data-protection{bottom:8px;right:8px}#sri-data-protection .sri-dp-trigger{max-width:min(290px,calc(100vw - 16px))}#sri-data-protection .sri-dp-panel{bottom:40px;right:0;width:min(350px,calc(100vw - 16px));max-height:calc(100dvh - 58px)}}
